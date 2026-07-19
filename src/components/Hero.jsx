@@ -1,6 +1,25 @@
+import { useState, useEffect } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import rubina from '../assets/rubina.png'
 
+const roles = [
+  'Computer Science Graduate',
+  'Full-stack Developer',
+  'AI & Machine Learning Enthusiast',
+  'Software Engineer',
+  'QA & Software Testing',
+]
+
 function Hero() {
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % roles.length)
+    }, 2200)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 text-white flex items-center px-8 md:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center w-full">
@@ -8,18 +27,29 @@ function Hero() {
         <div>
           <p className="text-blue-400 font-medium mb-2">Hello, I'm</p>
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Rubina Rekić</h1>
-          <p className="text-xl md:text-2xl font-semibold mb-6">
-            <span className="text-purple-400">Full-stack apps</span> with{' '}
-            <span className="text-blue-400">React</span>,{' '}
-            <span className="text-blue-400">Node.js</span> & real-time features
-          </p>
+
+          <div className="h-10 mb-6">
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={roles[index]}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.4 }}
+                className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent"
+              >
+                {roles[index]}
+              </motion.p>
+            </AnimatePresence>
+          </div>
+
           <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-            Final-year Computer Science & Informatics student (GPA 8.8),
-            with hands-on experience building full-stack apps, real-time
+            Computer Science & Informatics graduate (GPA 8.8), with
+            hands-on experience building full-stack apps, real-time
             systems, AI research, and IoT projects.
           </p>
           <p className="text-green-400 font-medium mb-6">
-            🚀 Open to internship opportunities
+            🚀 Open to work & internship opportunities
           </p>
 
           <div className="flex flex-wrap gap-3 mb-8">
@@ -54,7 +84,7 @@ function Hero() {
           <img
             src={rubina}
             alt="Rubina Rekić"
-            className="w-full max-w-md rounded-2xl object-cover"
+            className="w-full max-w-md object-contain"
           />
         </div>
       </div>
