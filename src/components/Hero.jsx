@@ -84,7 +84,7 @@ function Hero() {
           <img
             src={rubina}
             alt="Rubina Rekić"
-            className="w-full max-w-md object-contain"
+            className="w-full max-w-xs md:max-w-sm object-contain max-h-[70vh]"
           />
         </div>
       </div>
