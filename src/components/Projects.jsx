@@ -1,4 +1,10 @@
 const projects = [
+    {
+    title: "Graph Theory for Neural Networks 📊",
+    description: "Bachelor's thesis formalizing trained neural networks as directed weighted graphs — applying centrality, modularity, spectral and robustness analysis to compare three architectures of varying depth and width.",
+    tech: ["Python", "PyTorch", "NetworkX", "NumPy", "Matplotlib"],
+    github: "https://github.com/rubina-rekic/graph-theory-neural-network-modelling"
+  },
   {
     title: "YourRide 🚗",
     description: "Full-stack ride-sharing web app with real-time SignalR notifications, role-based access control and MVC architecture.",

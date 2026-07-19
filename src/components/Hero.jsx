@@ -11,7 +11,7 @@ function Hero() {
         />
       </div>
       <h1 className="text-5xl font-bold mb-4">Hi, I'm Rubina 👋</h1>
-      <p className="text-xl text-gray-400 mb-8">Computer Science Student & Aspiring Developer</p>
+      <p className="text-xl text-gray-400 mb-8">Computer Science Graduate & Software Developer</p>
       <a 
         href="#projects" 
         className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full transition"
