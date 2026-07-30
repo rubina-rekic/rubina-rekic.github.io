@@ -44,7 +44,7 @@ function Hero() {
           </div>
 
           <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-            Computer Science & Informatics graduate (GPA 8.8), with
+            Computer Science & Informatics graduate (GPA 8.7), with
             hands-on experience building full-stack apps, real-time
             systems, AI research, and IoT projects.
           </p>
@@ -84,7 +84,7 @@ function Hero() {
           <img
             src={rubina}
             alt="Rubina Rekić"
-            className="w-full max-w-xs md:max-w-sm object-contain max-h-[70vh]"
+            className="w-full max-w-xs md:max-w-sm object-contain max-h-[80vh]"
           />
         </div>
       </div>
